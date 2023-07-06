@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+ <html>
+
+<head>
+
+    <style>
+    
+    th,td {border: solid 1px darkblue; 
+    padding: 7px;
+    }
+
+    table{border-collapse: collapse;
+    width: 70%;
+    text-align: left;
+     }
+
+     tr:nth-child(even){background-color: #f2f2f2; }
+     tr:hover{background-color: #d0d0d0;
+     font-weight: bold;
+     }
+
+     th{background-color: darkblue;
+     color: white;
+     
+     }
+
+     #lbmult, #lbrang {background-color:#f1f1f1; padding: 5px; width: 5px;
+     
+     border-radius: 100%;
+     
+     }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<input id="mult" type="range" min="1" max="15" oninput="updateLab()">
+<label id="lbmult"></label>
+
+
+<input id="rang" type="range" min="10" max="100" oninput="updateLab()">
+<label id="lbrang"></label>
+
+<input type="button" value="Press" onclick="display()">
+
+<br><br>
+
+<table id= "tabla">
+
+    <tr>
+
+        <th>Operation</th>
+        <th>Result</th>
+
+    </tr>
+
+</table>
+
+
+<script>
+
+function display(){
+
+
+
+var b = 0
+var a = 0
+var r = 0
+
+const tabla = document.getElementById("tabla");
+
+const nlist = document.querySelectorAll("tr");
+
+var n = nlist.length
+
+
+while(n > 1){
+
+tabla.deleteRow(1);
+
+n--;
+
+}
+
+a = document.getElementById("mult").value;
+b =  document.getElementById("rang").value;
+
+for(let i = 1; i <= b; i++){
+
+r = a * i;
+
+const row = document.createElement("tr");
+const cellOp = document.createElement("td")
+const cellR = document.createElement("td")
+const nodeOp = document.createTextNode(a + " x " + i + " = ");
+const nodeR = document.createTextNode(r);
+
+tabla.appendChild(row)
+row.appendChild(cellOp);
+row.appendChild(cellR);
+cellOp.appendChild(nodeOp);
+cellR.appendChild(nodeR);
+
+}
+}
+
+function updateLab(){
+
+lbm = document.getElementById("mult").value;
+lbr =  document.getElementById("rang").value;
+
+const lbrang = document.getElementById("lbrang");
+const lbmult = document.getElementById("lbmult");
+
+lbmult.innerHTML = lbm;
+lbrang.innerHTML = lbr;
+
+
+}
+
+</script>
+    
+</body>
+
+ </html>
