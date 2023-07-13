@@ -33,6 +33,16 @@ th,td {
         color: white; 
     }
 
+    .info{
+        color: darkblue;
+        
+        
+    }
+
+    input[type="range"]{
+        margin-bottom: 10px;
+    } 
+
     #lbmult, #lbrang {
         display: inline-block;
         text-align: center;
@@ -65,7 +75,7 @@ th,td {
         cursor: grab;
     }
 
-  @media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     
     .table-container{
         font-size: 25px;
@@ -87,24 +97,23 @@ th,td {
         border-radius: 5px;
     }
 
-}
 
-input[type="range"]{
+
+    input[type="range"]{
     display: block;
     margin-bottom: 10px;
     width: 100%;
-    
-}
+    }
 
-#lbmult, #lbrang {
-    display: block;
-    text-align: center;
-    background-color:#ece7e7;
-    width: 100%;
-    height: 50px;
-    border-radius: 0%;
-    margin: 10px auto;
-    
-    
+    #lbmult, #lbrang {
+        display: block;
+        text-align:center;
+        width: 100%;
+        height: 50px;
+        border-radius: 0%;
+        margin: 10px auto;
+        padding: 10px;
+        
+    }
+
 }
-    
