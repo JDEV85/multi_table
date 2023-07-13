@@ -1,24 +1,67 @@
 *{ box-sizing: border-box;}
 
+.table-container{
+    background-color: rgb(172, 142, 142);
+    width: 60%;
+    max-width: 60%;
+    min-width: 60%;
+    margin: auto;
+}
 
-th,td {border: solid 1px darkblue; 
-    padding: 7px;
+th,td {
+        border: solid 1px darkblue; 
+        padding: 7px;
     }
 
-    table{border-collapse: collapse;
-    width: 70%;
-    text-align: left;
+    table{
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
     }
 
-    tr:nth-child(even){background-color: #f2f2f2; }
-    tr:hover{background-color: #d0d0d0;
-    font-weight: bold;
+    tr:nth-child(even){
+        background-color: #f2f2f2; }
+    
+    tr:hover{
+        background-color: #d0d0d0;
+        font-weight: bold;
     }
 
-    th{background-color: darkblue;
-    color: white; 
+    th{
+        background-color: darkblue;
+        color: white; 
     }
 
-    #lbmult, #lbrang {background-color:#f1f1f1; padding: 5px; width: 5px; 
-    border-radius: 100%;
+    #lbmult, #lbrang {
+        display: inline-block;
+        text-align: center;
+        background-color:#ece7e7;
+        padding: 5px;
+        width: 30px;
+        border-radius: 100%;
     }
+
+    .buton {
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+        border: #bbb solid 1px;
+        border-radius: 10%;
+        margin-left: 10px;
+        text-align: center;
+        color: blue;
+        cursor: pointer;
+        
+    }
+
+    .buton:hover{
+        background-color: #4cfa77;
+
+    }
+
+    input[type="range"]{
+        cursor: grab;
+    }
+
+  

@@ -1,7 +1,5 @@
 function display(){
 
-
-
     var b = 0
     var a = 0
     var r = 0
