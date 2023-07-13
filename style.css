@@ -1,0 +1,24 @@
+*{ box-sizing: border-box;}
+
+
+th,td {border: solid 1px darkblue; 
+    padding: 7px;
+    }
+
+    table{border-collapse: collapse;
+    width: 70%;
+    text-align: left;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2; }
+    tr:hover{background-color: #d0d0d0;
+    font-weight: bold;
+    }
+
+    th{background-color: darkblue;
+    color: white; 
+    }
+
+    #lbmult, #lbrang {background-color:#f1f1f1; padding: 5px; width: 5px; 
+    border-radius: 100%;
+    }
